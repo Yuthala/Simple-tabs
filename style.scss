@@ -16,8 +16,8 @@ a {
 	}
 }
 
-.main {
-	height: 650px;
+.container {
+	min-height: 1650px;
 	width: 100%;
 	background: url(../img/bg.jpg) center no-repeat;
 	background-size: cover;
@@ -34,43 +34,85 @@ a {
 	}
 }
 
-.main-block {
+.main {
+	&-block {
+		position: absolute;
+		width: 750px;
+		min-height: 300px;
+		border: 6px solid #c78030;
+		background-color: rgba(0, 0, 0, 0.4);
+		padding: 40px;
+		top: 40px;
+		left: 50%;
+		transform: translateX(-50%);
+		text-align: center;
+		z-index: 3
+	}
+	&-block-link {
+		color: #fff;
+		font-size: 22px;
+		font-weight: bold;
+		text-transform: lowercase;
+	}
+	&-block-link:after {
+		content: '';
+		display: block;
+		width: 10%;
+		height: 3px;
+		background-color: #fff;
+		margin: 0 auto;
+		margin-top: 2px;
+	}
+	&-block-title {
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 52px;
+		margin-top: 35px;
+	}
+	&-block-descr {
+		color: #c78030;
+		text-transform: uppercase;
+		font-size: 22px;
+		margin-top: 35px;
+		font-weight: bold;
+	}
+}
+
+
+.info {
 	position: absolute;
-	width: 750px;
-	min-height: 300px;
-	border: 6px solid #c78030;
-	background-color: rgba(0, 0, 0, 0.4);
-	padding: 40px;
-	top: 40px;
+	top: 550px;
 	left: 50%;
 	transform: translateX(-50%);
-	text-align: center;
-	z-index: 3
-}
-.main-block-link {
-	color: #fff;
-	font-size: 22px;
-	font-weight: bold;
-}
-.main-block-link:after {
-	content: '';
-	display: block;
-	width: 10%;
-	height: 3px;
-	background-color: #fff;
-	margin: 0 auto;
-	margin-top: 2px;
-}
-.main-block-title {
-	color: #fff;
-	text-transform: uppercase;
-	font-size: 52px;
-	margin-top: 35px;
-}
-.main-block-descr {
-	color: #c78030;
-	text-transform: uppercase;
-	font-size: 22px;
-	margin-top: 35px;
-	font-weight: bold;
+	width: 950px;
+	min-height: 580px;
+	background-color: #373737;
+	padding: 50px;
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8);
+	z-index: 3;
+	&-header {
+		width: 100%;
+		height: 50px;
+		display: flex;
+		justify-content: space-around;
+	}
+	&-header-tab {
+		color: #c78030;
+		font-weight: bold;
+		font-size: 24px;
+		cursor: pointer;
+	}
+	&-header-tab:after {
+		content: '';
+		display: block;
+		width: 0%;
+		height: 3px;
+		background-color: #c78030;
+		margin-top: 4px;
+		-webkit-transition: 0.4s;
+				transition: 0.4s;
+	}
+	&-header-tab:hover:after {
+		width: 60%;
+	}
 }
