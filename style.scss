@@ -1,3 +1,5 @@
+
+//Common
 body {
 	font-family: 'Comfortaa', cursive;
 }
@@ -15,6 +17,7 @@ a {
 	}
 }
 
+//CONTAINER
 .container {
 	min-height: 1650px;
 	width: 100%;
@@ -34,6 +37,7 @@ a {
 	}*/
 }
 
+//==MAIN==
 .main {
 	&-block {
 		position: absolute;
@@ -42,7 +46,7 @@ a {
 		border: 6px solid #c78030;
 		//background-color: rgba(0, 0, 0, 0.4);
 		padding: 40px;
-		top: 40px;
+		top: 60px;
 		left: 50%;
 		transform: translateX(-50%);
 		text-align: center;
@@ -70,22 +74,22 @@ a {
 		margin-top: 35px;
 	}
 	&-block-descr {
-		color: #c78030;
+		color: #754105;
 		text-transform: uppercase;
-		font-size: 22px;
+		font-size: 28px;
 		margin-top: 35px;
 		font-weight: bold;
 	}
 }
 
-
+//==INFO==
 .info {
 	position: absolute;
 	top: 830px;
 	left: 50%;
 	transform: translateX(-50%);
 	width: 950px;
-	min-height: 580px;
+	min-height: 480px;
 	background-color: #373737;
 	padding: 50px;
 	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8);
@@ -162,5 +166,50 @@ a {
 			}
 		}
 	}
-	
+}
+
+//=FOOTER==
+footer {
+	height: 50px;
+	background-color: rgb(124, 126, 129);
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	div {
+		color: #fff;
+	}
+}
+
+//EFFECTS
+.fade {
+	-webkit-animation-name: fade;
+			animation-name: fade;
+	-webkit-animation-duration: 2.5s;
+			animation-duration: 2.5s;
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 2.5s;
+  }
+  @-webkit-keyframes fade {
+	from {
+	  opacity: 0.1;
+	}
+	to {
+	  opacity: 1;
+	}
+  }
+  @keyframes fade {
+	from {
+	  opacity: 0.1;
+	}
+	to {
+	  opacity: 1;
+	}
+}
+
+.hide {
+	display:none;
+}
+.show {
+	display: flex;
 }
