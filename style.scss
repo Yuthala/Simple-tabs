@@ -119,6 +119,9 @@ a {
 	&-header-tab:hover:after {
 		width: 60%;
 	}
+	// &-header-tab:active:after {
+	// 	width: 60%;
+	// }
 	&-tabcontent {
 		width: 100%;
 		display: -webkit-box;
@@ -167,6 +170,18 @@ a {
 		}
 	}
 }
+
+#alps:after {
+	content: '';
+	display: block;
+	width: 0%;
+	height: 3px;
+	background-color: #c78030;
+	margin-top: 4px;
+}
+#alps:hover:after {
+		width: 80%;
+	}
 
 //=FOOTER==
 footer {
