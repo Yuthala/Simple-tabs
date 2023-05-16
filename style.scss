@@ -23,18 +23,6 @@ a {
 	width: 100%;
 	background: url(../img/bg.jpg) center no-repeat;
 	background-size: cover;
-
-	/*&:after {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: rgba(58, 66, 75, 0.6);
-		z-index: 2;
-		min-height: 1650px;
-	}*/
 }
 
 //==MAIN==
@@ -105,7 +93,7 @@ a {
 			font-size: 24px;
 			cursor: pointer;
 		}
-
+	}
 .info-header-tab:after {
 	content: '';
 	display: block;
@@ -128,15 +116,6 @@ a {
 	transition: 0.4s;
 }
 
-
-		// &-tab:hover:after {
-		// 	width: 60%;
-		// }
-	}
-	
-	// &-header-tab:active:after {
-	// 	width: 60%;
-	// }
 	&-tabcontent {
 		width: 100%;
 		display: -webkit-box;
@@ -240,6 +219,7 @@ footer {
 .hide {
 	display:none;
 }
+
 .show {
 	display: flex;
 }
