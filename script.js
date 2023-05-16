@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', function() {
     //получаем элементы со страницы
     let tab = document.querySelectorAll('.info-header-tab'),
 		//alps = document.getElementById('alps'),
-		tabLine = document.querySelectorAll('.info-header-tab:after'),
+		//tabLine = document.querySelectorAll('.info-header-tab:after'),
         info = document.querySelector('.info-header'),
         tabContent = document.querySelectorAll('.info-tabcontent');
 
@@ -15,6 +15,7 @@ window.addEventListener('DOMContentLoaded', function() {
         for (let i = a; i < tabContent.length; i++) {
             tabContent[i].classList.remove('show');
             tabContent[i].classList.add('hide');
+			tab[i].classList.remove('active');
 			//tabLine[i].classList.remove('show');
             //tabLine[i].classList.add('hide');
         }
@@ -28,6 +29,7 @@ window.addEventListener('DOMContentLoaded', function() {
         if (tabContent[b].classList.contains('hide')) {
             tabContent[b].classList.remove('hide');
             tabContent[b].classList.add('show');
+			tab[b].classList.add('active');
 			//tabLine[b].classList.remove('hide');
             //tabLine[b].classList.add('show');
         }
@@ -39,7 +41,7 @@ window.addEventListener('DOMContentLoaded', function() {
         if (target && target.classList.contains('info-header-tab')) { //делегируем событие click "обертке" табов
             for(let i = 0; i < tab.length; i++) {
                 if (target == tab[i]) { //condition tab index matches [i]
-					console.log(tabLine);
+					//console.log(tabLine);
 					//document.getElementById('alps:after').style.width = '80%';
                     hideTabContent(0); // hide all tabs, starting from 0
                     showTabContent(i); //show specific tab with the same index
