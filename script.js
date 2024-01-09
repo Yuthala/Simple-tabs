@@ -3,9 +3,9 @@ window.addEventListener('DOMContentLoaded', function() {
     'use strict';
 
     //получаем элементы со страницы и "кладем" их в переменные
-    let tab = document.querySelectorAll('.info-header-tab'),
-        info = document.querySelector('.info-header'),
-        tabContent = document.querySelectorAll('.info-tabcontent');
+    let tab = document.querySelectorAll('.info-header-tab'), //хедеры табов
+        info = document.querySelector('.info-header'), //wrapper для всех хедеров (чтобы можно было изменять количество табов без изменения кода = делегирование события click оболочке)
+        tabContent = document.querySelectorAll('.info-tabcontent'); // табы, содержащие контентную часть 
 
 
 	//функция, скрывающая tab путем добавления класса hide
@@ -36,7 +36,7 @@ window.addEventListener('DOMContentLoaded', function() {
             for(let i = 0; i < tab.length; i++) {
                 if (target == tab[i]) { //если выбран таб с индексом [i]
                     hideTabContent(0); // прячем все табы, начиная с первого ([0])
-                    showTabContent(i); //показываем таб с соответствующим индексом ([1])
+                    showTabContent(i); //показываем таб с соответствующим индексом ([i])
                     break;
                 }
             }
